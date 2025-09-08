@@ -1,0 +1,64 @@
+        body {
+            overflow-x: hidden;
+            overflow-y: scroll;
+            width: 100vw;
+        }
+        
+        .fullcontent {
+            height: auto;
+            padding: 40px 10px;
+            width: 100%;
+        }
+        
+        h2 {
+            font: bold Roboto 25px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        h2 hr {
+            width: 90vw;
+        }
+        
+        #scroll_needed {
+            height: 100px;
+            overflow-y: scroll;
+            text-align: left;
+        }
+        
+        textarea {
+            resize: none;
+            width: 500px;
+            border: 1.5px solid #bdbdbd;
+            border-radius: 7px;
+            font-size: 16px;
+            background: #fafafa;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+        }
+        
+        textarea:focus {
+            border-color: #7c3aed;
+            outline: none;
+            background: #fff;
+        }
+        
+        .base_buttons {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        form {
+            width: 100%;
+        }
+        
+        @media screen and (max-width: 900px) {
+            .formbox input {
+                width: 400px;
+            }
+            .formbox textarea {
+                width: 400px;
+            }
+        }

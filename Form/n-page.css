@@ -1,0 +1,253 @@
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    body {
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    a {
+        all: unset;
+    }
+    
+    .loader {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        background-color: rgb(197, 237, 237);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 1;
+        object-fit: cover;
+    }
+    
+    .purple-box {
+        width: 305px;
+        height: 277px;
+        background-color: rgb(79, 45, 78);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 2px 17px 6px -2px rgb(40 39 39 / 12%);
+        animation: levitation 1s ease-in-out infinite alternate;
+        opacity: 0.2;
+    }
+    
+    .purple-box img {
+        width: 280px;
+        height: auto;
+    }
+    
+    .fade-out {
+        opacity: 0;
+    }
+    
+    @keyframes levitation {
+        to {
+            opacity: 1;
+            transform: translateY(-20px);
+        }
+    }
+    
+    .sets {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+    
+    .btns {
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: auto;
+        background-color: purple;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+    
+    .txtbtns {
+        width: 120px;
+        height: 40px;
+        padding: 2px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border: none;
+        background-color: purple;
+        border-radius: 3px;
+    }
+    
+    .btns svg {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .btns:hover {
+        background-color: rgb(242, 207, 242);
+        color: purple;
+    }
+    
+    .btns:hover svg {
+        fill: purple;
+    }
+    
+    .fullcontent {
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(197, 237, 237);
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .container h2 {
+        font: bold 25px 'Roboto', sans-serif;
+        margin: 0;
+    }
+    
+    .container img {
+        width: 385px;
+        height: auto;
+    }
+    
+    .box {
+        width: auto;
+        height: auto;
+        padding: 25px 90px;
+        margin: 10px;
+        border-radius: 10px;
+        /* box-shadow: 1px 20px 26px -1px rgb(167, 165, 165); */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+    }
+    
+    .wtmark {
+        position: absolute;
+        opacity: 0.05;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        pointer-events: none;
+    }
+    
+    .formbox {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        margin: 25px 0px;
+        width: auto;
+    }
+    
+    .formbox h3 {
+        margin: 0;
+        font: 16px 'Roboto', sans-serif;
+        color: #333;
+    }
+    
+    .formbox input {
+        width: 500px;
+        padding: 12px 14px;
+        margin: 10px 0;
+        border: 1.5px solid #bdbdbd;
+        border-radius: 7px;
+        font-size: 16px;
+        background: #fafafa;
+        transition: border-color 0.2s;
+        box-sizing: border-box;
+    }
+    
+    input:focus {
+        border-color: #7c3aed;
+        outline: none;
+        background: #fff;
+    }
+    
+    @media screen and (max-width: 900px) {
+        .box {
+            min-width: 0;
+            height: auto;
+            flex-direction: column;
+            padding: 15px;
+            gap: 14px;
+            margin: 10px 0px;
+        }
+        .container img {
+            width: 70vw;
+            max-width: 300px;
+        }
+        .container h2 {
+            font-size: 20px;
+        }
+        .btns {
+            right: 10px;
+            top: 10px;
+        }
+        .btns svg {
+            width: 40px;
+            height: 40px;
+        }
+        input {
+            font-size: 15px;
+            padding: 10px 12px;
+            width: 400px;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .box {
+            padding: 8px;
+            gap: 10px;
+        }
+        .container img {
+            width: 90vw;
+            max-width: 180px;
+        }
+        .container h2 {
+            font-size: 16px;
+        }
+        .purple-box {
+            width: 90vw;
+            height: 120px;
+        }
+        .purple-box img {
+            width: 80vw;
+            max-width: 120px;
+        }
+        .btns {
+            right: 5px;
+            top: 5px;
+            border-radius: 6px;
+        }
+        .btns svg {
+            width: 28px;
+            height: 28px;
+        }
+        input {
+            font-size: 14px;
+            padding: 8px 10px;
+        }
+        .fullcontent,
+        .loader {
+            padding: 0;
+        }
+    }

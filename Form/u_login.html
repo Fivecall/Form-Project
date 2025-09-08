@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Digievolve logo/D2.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="n-page.css">
+    <title>Digievolve</title>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="purple-box">
+            <img src="Digievolve logo/D3.png" alt="">
+        </div>
+    </div>
+    <a href="pre-login.html">
+        <div class="sets btns"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M213.85-180v-364.08L96.08-455 60-502.85 480-820l166.92 125.46V-780h97.69v159.77l155.77 117.38L864.31-455l-117.77-89.08V-180H524.62v-224.62h-89.24V-180H213.85Zm60-60h101.54v-224.61h209.22V-240h101.93v-349.31L480-744.39 273.85-589.31V-240Zm130-319.38h152.3q0-30.08-22.84-49.43-22.85-19.34-53.31-19.34t-53.31 19.31q-22.84 19.31-22.84 49.46ZM375.39-240v-224.61h209.22V-240v-224.61H375.39V-240Z"/></svg></div>
+    </a>
+    <div class="fullcontent">
+        <div class="container">
+
+            <h2> <img src="Digievolve logo/Logo1.png" alt=""></h2>
+            <div class="box">
+                <form action="">
+                    <label for="username" class="formbox">
+                        <h3>Type in your Username:</h3>
+                        <input type="text" placeholder="e.g Johnbill#25" name="username">
+                    </label>
+
+                    <label for="password" class="formbox">
+                        <h3>Type in your Password:</h3>
+                        <input type="password" name="password">
+                    </label>
+                </form>
+                <a href="profile.html"><button class="btns txtbtns">Submit</button></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        page = document.querySelector('.fullcontent');
+
+        setTimeout(() => page.style.display = 'flex', 800);
+        loader = document.querySelector('.loader');
+        loader.classList.add('fade-out');
+        setTimeout(() => loader.style.display = 'none', 1000);
+    })
+</script>
+
+</html>

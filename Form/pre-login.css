@@ -1,0 +1,220 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+a {
+    all: unset;
+}
+
+.loader {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgb(197, 237, 237);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.purple-box {
+    width: 305px;
+    height: 277px;
+    background-color: rgb(79, 45, 78);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 17px 6px -2px rgb(40 39 39 / 12%);
+    animation: levitation 1s ease-in-out infinite alternate;
+    opacity: 0.2;
+}
+
+.purple-box img {
+    width: 280px;
+    height: auto;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+@keyframes levitation {
+    to {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+}
+
+.fullcontent {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(197, 237, 237);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h2 {
+    font: bold 25px 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.container img {
+    width: 385px;
+    height: auto;
+}
+
+.box {
+    width: 617px;
+    height: 240px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 20px 26px -1px rgb(167, 165, 165);
+    display: flex;
+    align-items: center;
+}
+
+.pholder {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pathway {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+}
+
+.pathway h3 {
+    margin: 0;
+    color: white;
+}
+
+.magicbase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 110px;
+    height: 110px;
+    background-color: #000000;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.magicbase svg {
+    width: 80px;
+    height: 80px;
+}
+
+.magicbase:hover {
+    background: rgb(201, 207, 211);
+}
+
+.magicbase:hover svg {
+    fill: #000000;
+}
+
+.magicbase:hover h3 {
+    color: #000000;
+}
+
+.purple {
+    background-color: rgb(79, 45, 78);
+}
+
+.purple:hover {
+    background: rgb(234, 252, 234);
+}
+
+.purple:hover svg {
+    fill: rgb(79, 45, 78);
+}
+
+.purple:hover h3 {
+    color: rgb(79, 45, 78);
+}
+
+@media screen and (max-width: 900px) {
+    .box {
+        width: 90vw;
+        min-width: 0;
+        height: auto;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .container img {
+        width: 70vw;
+        max-width: 300px;
+    }
+    .magicbase {
+        width: 90px;
+        height: 90px;
+    }
+    .magicbase svg {
+        width: 60px;
+        height: 60px;
+    }
+    .pholder {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .box {
+        width: 98vw;
+        padding: 8px;
+    }
+    .container img {
+        width: 90vw;
+        max-width: 220px;
+    }
+    .container h2 {
+        font-size: 18px;
+    }
+    .magicbase {
+        width: 70px;
+        height: 70px;
+    }
+    .magicbase svg {
+        width: 40px;
+        height: 40px;
+    }
+    .purple-box {
+        width: 90vw;
+        height: 120px;
+    }
+    .purple-box img {
+        width: 80vw;
+        max-width: 180px;
+    }
+    .fullcontent,
+    .loader {
+        padding: 0;
+    }
+}
